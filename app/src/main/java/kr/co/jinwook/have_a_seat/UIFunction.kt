@@ -3,6 +3,10 @@ package kr.co.jinwook.have_a_seat
 import android.graphics.Color
 import android.view.View
 import android.view.Window
+import android.app.Activity
+
+
+
 
 object UIFunction {
 
@@ -14,8 +18,21 @@ object UIFunction {
         }
         return result
     }
+    fun makeGuideLineDownOnActivityMain(){
+        MainActivity.instance!!.binding.statusbarGuideline.setGuidelineBegin(getStatusBarHeight(MainActivity.instance!!.resources))
+
+
+    }
+
+    fun makeGuideLineUpOnActivityMain(){
+
+        MainActivity.instance!!.binding.statusbarGuideline.setGuidelineBegin(0)
+
+    }
 
     fun makeStatusbarTransparent(window: Window){
+
+
         window?.decorView?.systemUiVisibility =
             View.SYSTEM_UI_FLAG_LAYOUT_STABLE  or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         window.statusBarColor = Color.TRANSPARENT
