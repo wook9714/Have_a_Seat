@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         UIFunction.makeStatusbarTransparent(window)
 
-        UIFunction.makeGuideLineDownOnActivityMain()
+        UIFunction.makeGuideLineDown(binding.statusbarGuideline)
 
 
         Log.d("tag",UIFunction.getStatusBarHeight(resources).toString())

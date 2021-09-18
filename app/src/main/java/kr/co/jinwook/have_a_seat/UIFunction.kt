@@ -18,15 +18,15 @@ object UIFunction {
         }
         return result
     }
-    fun makeGuideLineDownOnActivityMain(){
-        MainActivity.instance!!.binding.statusbarGuideline.setGuidelineBegin(getStatusBarHeight(MainActivity.instance!!.resources))
+    fun makeGuideLineDown(guideLine:androidx.constraintlayout.widget.Guideline){
+        guideLine.setGuidelineBegin(getStatusBarHeight(MainActivity.instance!!.resources))
 
 
     }
 
-    fun makeGuideLineUpOnActivityMain(){
+    fun makeGuideLineUp(guideLine:androidx.constraintlayout.widget.Guideline){
 
-        MainActivity.instance!!.binding.statusbarGuideline.setGuidelineBegin(0)
+        guideLine.setGuidelineBegin(0)
 
     }
 
