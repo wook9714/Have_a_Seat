@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "952081194508",
+    "project_id": "have-a-seat-f52a8",
+    "storage_bucket": "have-a-seat-f52a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952081194508:android:182cf95adeaeb0f3025829",
+        "android_client_info": {
+          "package_name": "kr.co.jinwook.have_a_seat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952081194508-mmmthsicndbr5s21ogc9l1or0kh6oa2t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.jinwook.have_a_seat",
+            "certificate_hash": "d89b83c7fd11bf963a6fbf8c552c9f8ff4deff27"
+          }
+        },
+        {
+          "client_id": "952081194508-letoibmle911pso9lccff4ljao20kqk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtuMPWnrMiwzucZ7Dqm5LWaHgZyOCtBrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952081194508-letoibmle911pso9lccff4ljao20kqk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
