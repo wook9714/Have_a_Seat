@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.co.jinwook.have_a_seat">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
+
+    <meta-data android:name="com.kakao.sdk.AppKey" android:value="fbe5938f443d060af0d220916f20e1dc"/>
+
 
     <application
         android:allowBackup="true"
