@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import kr.co.jinwook.have_a_seat.databinding.FragmentOrderSheetNeedPayBinding
+import kr.co.jinwook.have_a_seat.databinding.FragmentOrderSheetPaidBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +23,7 @@ class FragmentOrderSheetPaid : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var binding:FragmentOrderSheetPaidBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +37,22 @@ class FragmentOrderSheetPaid : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_order_sheet_paid, container, false)
+        binding = FragmentOrderSheetPaidBinding.inflate(inflater,container,false)
+
+        //테스트용 데이터 만드는 구간
+        var testData:MutableList<OrderSheetItemForm> = mutableListOf()
+        for(i in 0..100) {
+            var testSet = OrderSheetItemForm("정산완료","정산된 가게이름 ${i.toString()}","주문 품목에 대한 설명",10000)
+            testData.add(testSet)
+        }
+        var adapter = OrderSheetRecyclerAdapter()
+        adapter.listData = testData
+        binding.orderSheetAllRecyclerView.adapter=adapter
+        binding.orderSheetAllRecyclerView.layoutManager = LinearLayoutManager(context)
+
+
+
+        return binding.root
     }
 
     companion object {
