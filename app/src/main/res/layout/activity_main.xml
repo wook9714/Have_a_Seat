@@ -11,7 +11,9 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineAmbientShadowColor="@android:color/transparent">
 
 
         <androidx.appcompat.widget.Toolbar
@@ -20,10 +22,25 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/Mint"
             app:titleTextColor="@color/black"
-            app:navigationIcon="@drawable/ic_baseline_menu_24">
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
+            >
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="내 위치"
+                android:backgroundTint="@color/Mint"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:pointerIcon="text"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                >
+            </Button>
+
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -37,14 +54,37 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
             android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/maintoolbar"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:height="40dp"
+                    android:background="@drawable/mainbtn_background"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:hint="@string/searchBar_hint"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="16dp"
+                    android:paddingLeft="20dp"
+                    >
+
+                </EditText>
+            </androidx.appcompat.widget.Toolbar>
 
             <Button
                 android:id="@+id/btnMyOrderBills"
@@ -54,7 +94,10 @@
                 android:background="@drawable/mainbtn_background"
                 android:text="@string/billsTitle"
                 android:textStyle="bold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
 
             </Button>
 
@@ -66,7 +109,10 @@
                 android:background="@drawable/mainbtn_background"
                 android:text="@string/usualPlaceTitle"
                 android:textStyle="bold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
 
             </Button>
 
@@ -78,7 +124,10 @@
                 android:background="@drawable/mainbtn_background"
                 android:text="@string/MyGroupTitle"
                 android:textStyle="bold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
 
             </Button>
 
@@ -90,7 +139,10 @@
                 android:background="@drawable/mainbtn_background"
                 android:text="@string/GpsMappingTitle"
                 android:textStyle="bold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                >
 
             </Button>
 
