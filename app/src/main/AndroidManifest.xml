@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Have_a_Seat">
         <activity
+            android:name=".OrderSheet"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
