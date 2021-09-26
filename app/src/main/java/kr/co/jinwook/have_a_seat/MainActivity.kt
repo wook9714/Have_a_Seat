@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.widget.Toolbar
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
-    val binding by lazy{ ActivityMainBinding.inflate(layoutInflater)}
+    val binding by lazy {ActivityMainBinding.inflate(layoutInflater)}
 
     init {
         instance = this
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         UIFunction.makeStatusbarTransparent(window)
 
         UIFunction.makeGuideLineDown(binding.statusbarGuideline)
@@ -37,7 +40,12 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("tag",UIFunction.getStatusBarHeight(resources).toString())
 
+
+
+
+
     }
+
 
 
 
