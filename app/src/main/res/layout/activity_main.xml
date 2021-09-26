@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/smokyWhite"
 
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusbarGuideline" />
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarMain"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Mint"
+            app:titleTextColor="@color/black"
+            app:navigationIcon="@drawable/ic_baseline_menu_24">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/statusbarGuideline"
@@ -24,4 +34,67 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnMyOrderBills"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/mainbtn_background"
+                android:text="@string/billsTitle"
+                android:textColor="@color/black">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnMyUsualPlace"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/mainbtn_background"
+                android:text="@string/usualPlaceTitle"
+                android:textColor="@color/black">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnMyGroup"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/mainbtn_background"
+                android:text="@string/MyGroupTitle"
+                android:textColor="@color/black">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnGpsMapping"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/mainbtn_background"
+                android:text="@string/GpsMappingTitle"
+                android:textColor="@color/black">
+
+            </Button>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

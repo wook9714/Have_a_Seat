@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="Mint">#FF9FF5D4</color>
-    <color name="smokyGray">#FFF1F1F1</color>
+    <color name="smokyGray">#FFECECEC</color>
     <color name="smokyWhite">#fafafa</color>
     <color name="DarkGray">#FF433E50</color>
 </resources>

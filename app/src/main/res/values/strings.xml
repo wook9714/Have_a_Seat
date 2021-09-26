@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Have_a_Seat</string>
+    <string name="billsTitle">내 주문서</string>
+    <string name="usualPlaceTitle">자주가는맛집</string>
+    <string name="MyGroupTitle">내 그룹</string>
+    <string name="GpsMappingTitle">위치기반지도</string>
 </resources>
