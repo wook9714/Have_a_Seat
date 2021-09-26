@@ -7,26 +7,57 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-
+import android.view.MenuItem
+import kotlinx.android.synthetic.main.activity_main.*
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-
 import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
-
 
 class MainActivity : AppCompatActivity() {
     val binding by lazy {ActivityMainBinding.inflate(layoutInflater)}
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+
+        setSupportActionBar(toolbarMain)
+        binding.toolbarMain.setNavigationOnClickListener {
+            Toast.makeText(this, "Navigation Menu Clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnMyOrderBills.setOnClickListener {
+            val intentGoOrderSheet = Intent(this,OrderSheet::class.java)
+            startActivity(intentGoOrderSheet)
 
 
+        }
+
+/*
+        UIFunction.makeStatusbarTransparent(window)
+
+        UIFunction.makeGuideLineDown(binding.statusbarGuideline)
+
+
+        Log.d("tag",UIFunction.getStatusBarHeight(resources).toString())
+*/
+    }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.mainmenu,menu)
         return true
     }
 
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        var itemView = item.itemId
+        when(itemView){
+            R.id.myProfile -> Toast.makeText(applicationContext, "내 프로필 Clicked", Toast.LENGTH_SHORT).show()
+            R.id.notify -> Toast.makeText(applicationContext, "내 알림 Clicked", Toast.LENGTH_SHORT).show()
+        }
+        return false
+    }
     init {
         instance = this
     }
@@ -39,36 +70,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
 
-
-        binding.toolbarMain.setNavigationOnClickListener {
-            Toast.makeText(this, "Navigation Menu Clicked", Toast.LENGTH_SHORT).show()
-        }
-
-        binding.btnMyOrderBills.setOnClickListener {
-            val intentGoOrderSheet = Intent(this,OrderSheet::class.java)
-            startActivity(intentGoOrderSheet)
-
-        }
-
-
-/*
-
-        UIFunction.makeStatusbarTransparent(window)
-
-        UIFunction.makeGuideLineDown(binding.statusbarGuideline)
-
-
-        Log.d("tag",UIFunction.getStatusBarHeight(resources).toString())
-
-
-*/
-
-
-    }
 
 
 

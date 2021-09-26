@@ -53,6 +53,7 @@
                 android:layout_marginTop="50dp"
                 android:background="@drawable/mainbtn_background"
                 android:text="@string/billsTitle"
+                android:textStyle="bold"
                 android:textColor="@color/black">
 
             </Button>
@@ -64,6 +65,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/mainbtn_background"
                 android:text="@string/usualPlaceTitle"
+                android:textStyle="bold"
                 android:textColor="@color/black">
 
             </Button>
@@ -75,6 +77,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/mainbtn_background"
                 android:text="@string/MyGroupTitle"
+                android:textStyle="bold"
                 android:textColor="@color/black">
 
             </Button>
@@ -86,6 +89,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/mainbtn_background"
                 android:text="@string/GpsMappingTitle"
+                android:textStyle="bold"
                 android:textColor="@color/black">
 
             </Button>
