@@ -1,5 +1,6 @@
 package kr.co.jinwook.have_a_seat
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -15,6 +16,10 @@ import androidx.appcompat.widget.Toolbar
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
+import net.daum.mf.map.api.MapReverseGeoCoder
+
+
+
 
 class MainActivity : AppCompatActivity() {
     val binding by lazy {ActivityMainBinding.inflate(layoutInflater)}
@@ -34,6 +39,16 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        binding.btnGpsMapping.setOnClickListener {
+            val intentGoOrderSheet = Intent(this,SearchByLocation::class.java)
+            startActivity(intentGoOrderSheet)
+
+        }
+        LocationFuncion.getLocationNamebyGps(this,37.496556, 127.070630)
+
+
+
+
 
 /*
         UIFunction.makeStatusbarTransparent(window)

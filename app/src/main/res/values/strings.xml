@@ -7,11 +7,8 @@
     <string name="searchBar_hint">어디서 무엇을 먹을까?</string>
 
 
-
-
     <!--orderSheet텍스트필드-->
-    <string-array
-        name="order_sheet_tab_layout_texts">
+    <string-array name="order_sheet_tab_layout_texts">
         <item>전체</item>
         <item>정산완료</item>
         <item>미결제</item>

@@ -1,8 +1,13 @@
 package kr.co.jinwook.have_a_seat
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import kr.co.jinwook.have_a_seat.databinding.OrderSheetItemRecyclerBinding
 
 class OrderSheetRecyclerAdapter: RecyclerView.Adapter<OrderSheetHolder>() {
@@ -20,6 +25,7 @@ class OrderSheetRecyclerAdapter: RecyclerView.Adapter<OrderSheetHolder>() {
     override fun getItemCount(): Int {
         return listData.size
     }
+
 }
 
 class OrderSheetHolder(val binding:OrderSheetItemRecyclerBinding):RecyclerView.ViewHolder(binding.root){
@@ -28,6 +34,13 @@ class OrderSheetHolder(val binding:OrderSheetItemRecyclerBinding):RecyclerView.V
         binding.shopName.text = data.shopName
         binding.orderDescription.text = data.orderDescription
         binding.orderPrice.text = "${data.price}원"
+
+        UIFunction.downloadAndSetImageViewFromFB(binding.shopImage,"images/test.jpg")
+
+
+
+
+
 
     }
 }

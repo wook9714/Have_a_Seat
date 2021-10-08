@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.co.jinwook.have_a_seat">
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
-    </uses-permission>
-    <uses-permission android:name="android.permission.INTERNET">
-    </uses-permission>
 
-    <meta-data android:name="com.kakao.sdk.AppKey" android:value="fbe5938f443d060af0d220916f20e1dc"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
+    <meta-data
+        android:name="com.kakao.sdk.AppKey"
+        android:value="fbe5938f443d060af0d220916f20e1dc" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +16,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Have_a_Seat">
+        android:theme="@style/Theme.Have_a_Seat"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".SearchByLocation"
+            android:exported="true" />
+
         <activity
             android:name=".OrderSheet"
             android:exported="true" />
@@ -30,6 +34,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="fbe5938f443d060af0d220916f20e1dc" />
     </application>
 
 </manifest>
