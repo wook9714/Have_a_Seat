@@ -2,13 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.co.jinwook.have_a_seat">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <meta-data
         android:name="com.kakao.sdk.AppKey"
-        android:value="fbe5938f443d060af0d220916f20e1dc" />
+        android:value="@string/kakao_app_key" />
 
     <application
         android:allowBackup="true"
@@ -17,11 +17,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Have_a_Seat"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:name=".GlobalApplication"
+        >
+        <activity
+            android:name=".RestaurantInfo"
+            android:exported="true" />
         <activity
             android:name=".SearchByLocation"
             android:exported="true" />
-
         <activity
             android:name=".OrderSheet"
             android:exported="true" />
@@ -31,13 +35,17 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="fbe5938f443d060af0d220916f20e1dc" />
+            android:value="@string/kakao_app_key" />
     </application>
 
 </manifest>

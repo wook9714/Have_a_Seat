@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
         setSupportActionBar(toolbarMain)
         binding.toolbarMain.setNavigationOnClickListener {
             Toast.makeText(this, "Navigation Menu Clicked", Toast.LENGTH_SHORT).show()

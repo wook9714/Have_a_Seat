@@ -1,5 +1,6 @@
 package kr.co.jinwook.have_a_seat
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TableLayout
@@ -36,7 +37,8 @@ class OrderSheet : AppCompatActivity() {
         }.attach()
 
         binding.testButton.setOnClickListener {
-            adapter.notifyDataSetChanged()
+            val intent = Intent(this,RestaurantInfo::class.java)
+            startActivity(intent)
         }
 
 

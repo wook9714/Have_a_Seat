@@ -17,10 +17,14 @@ object LocationFuncion {
     fun getLocationNamebyGps(activity:Activity,latitude:Double,longitude:Double):String{
         val mapPoint = MapPoint.mapPointWithGeoCoord(latitude, longitude)
 
+
+
+
+
         val resultListner = ResultListner()
 
         val reverseGeoCoder = MapReverseGeoCoder(
-            "fbe5938f443d060af0d220916f20e1dc",
+            activity.getString(R.string.kakao_app_key),
             mapPoint,
             resultListner,
             activity
