@@ -11,6 +11,8 @@ class SearchByLocation : AppCompatActivity() {
     val binding by lazy{ ActivitySearchByLocationBinding.inflate(layoutInflater)}
     lateinit var mapView: MapView
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        UIFunction.makeStatusBarTransparent(window)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         mapView = MapView(this)
