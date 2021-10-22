@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Have_a_Seat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Have_a_Seat" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
 
 
@@ -20,4 +20,5 @@
 
 
     </style>
+
 </resources>
