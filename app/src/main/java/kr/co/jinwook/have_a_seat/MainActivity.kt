@@ -23,6 +23,7 @@ import android.content.pm.PackageManager
 
 import android.content.pm.PackageInfo
 import android.util.Base64
+import com.google.firebase.auth.ktx.auth
 import java.lang.Exception
 import java.security.MessageDigest
 
@@ -32,9 +33,23 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        FirebaseFunction.auth = Firebase.auth //파이어베이스 auth 초기화
+
+        //임시로 익명로그인
+        if(FirebaseFunction.auth.currentUser ==null){
+            Log.d("myTag","로그인 안됨")
+            FirebaseFunction.signInAnonymously(this)
+
+        }
+        else{
+            Log.d("myTag",FirebaseFunction.auth.uid!!)
+            FirebaseFunction.login()
+        }
+        //FirebaseFunction.test()
 
 
 
@@ -54,7 +69,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentGoOrderSheet)
 
         }
-        LocationFuncion.getLocationNamebyGps(this,37.496556, 127.070630)
+
+        binding.testButton.setOnClickListener{
+            val intentGoTestScene = Intent(this,Test::class.java)
+            startActivity(intentGoTestScene)
+        }
+
+        //LocationFuncion.getLocationNamebyGps(this,37.496556, 127.070630)
 
 
 

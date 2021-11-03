@@ -11,15 +11,27 @@
         android:value="@string/kakao_app_key" />
 
     <application
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Have_a_Seat"
-        android:usesCleartextTraffic="true"
-        android:name=".GlobalApplication"
-        >
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Have_a_Seat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".RestaurantInfo"
             android:exported="true" />
@@ -29,23 +41,7 @@
         <activity
             android:name=".OrderSheet"
             android:exported="true"
-            android:theme="@style/CustomTheme.Have_a_Seat"
-            />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Have_a_Seat"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <data
-                    android:host="@string/kakaolink_host"
-                    android:scheme="@string/kakao_scheme" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/CustomTheme.Have_a_Seat" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"

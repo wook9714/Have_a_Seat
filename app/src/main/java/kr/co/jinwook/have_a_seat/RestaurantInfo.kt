@@ -13,6 +13,7 @@ class RestaurantInfo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
         binding.button.setOnClickListener {
             KakaoMessage.sendMessage(this,KakaoMessage.defaultFeed)
         }

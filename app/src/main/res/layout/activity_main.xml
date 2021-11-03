@@ -164,11 +164,12 @@
             </Button>
 
             <Button
+                android:id="@+id/testButton"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/mainbtn_background"
-                android:text="@string/GpsMappingTitle"
+                android:text="테스트용페이지"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginStart="20dp"
