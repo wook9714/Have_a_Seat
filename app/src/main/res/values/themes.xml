@@ -21,6 +21,9 @@
 
     </style>
 
-    <style name="CustomTheme.Have_a_Seat" parent="Theme.AppCompat.Light.NoActionBar"/>
+    <style name="CustomTheme.Have_a_Seat" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fitsSystemWindows">true</item>
+
+    </style>
 
 </resources>

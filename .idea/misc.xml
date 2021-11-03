@@ -8,6 +8,9 @@
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout-v28/activity_main.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/activity_order_sheet.xml" value="0.25" />
+        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/activity_restaurant_info.xml" value="0.25" />
+        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/fragment_order_sheet_all.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/fragment_order_sheet_need_pay.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/fragment_order_sheet_paid.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/fragment_order_sheet_used.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/order_sheet_item_recycler.xml" value="0.3536458333333333" />

@@ -50,19 +50,24 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnGpsMapping.setOnClickListener {
-            val intentGoOrderSheet = Intent(this,SearchByLocation::class.java)
-            startActivity(intentGoOrderSheet)
+            val intentGoGpsMapping = Intent(this,SearchByLocation::class.java)
+            startActivity(intentGoGpsMapping)
 
         }
         LocationFuncion.getLocationNamebyGps(this,37.496556, 127.070630)
 
 
 
+        binding.btnRestaurantInfo.setOnClickListener {
+            val intentGoRestaurantInfo = Intent(this,RestaurantInfo::class.java)
+            startActivity(intentGoRestaurantInfo)
+        }
 
 
+
+
+        UIFunction.makeStatusBarTransparent(window)
 /*
-        UIFunction.makeStatusbarTransparent(window)
-
         UIFunction.makeGuideLineDown(binding.statusbarGuideline)
 
 
