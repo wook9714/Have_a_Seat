@@ -17,8 +17,12 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
 import net.daum.mf.map.api.MapReverseGeoCoder
+import android.content.pm.PackageManager
 
-
+import android.content.pm.PackageInfo
+import android.util.Base64
+import java.lang.Exception
+import java.security.MessageDigest
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        getAppKeyHash()
         setSupportActionBar(toolbarMain)
         binding.toolbarMain.setNavigationOnClickListener {
             Toast.makeText(this, "Navigation Menu Clicked", Toast.LENGTH_SHORT).show()
@@ -89,8 +94,21 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-
+    private fun getAppKeyHash() {
+        try {
+            val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
+            for (signature in info.signatures) {
+                var md: MessageDigest
+                md = MessageDigest.getInstance("SHA")
+                md.update(signature.toByteArray())
+                val something: String = String(Base64.encode(md.digest(), 0))
+                Log.e("Hash key", something)
+            }
+        } catch (e: Exception) {
+            // TODO Auto-generated catch block
+            Log.e("name not found", e.toString())
+        }
+    }
 
 
 
