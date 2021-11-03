@@ -23,6 +23,9 @@ class OrderSheet : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        UIFunction.makeStatusBarTransparent(window)
+
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         val fragmentList = listOf(FragmentOrderSheetAll(),FragmentOrderSheetPaid(),FragmentOrderSheetNeedPay(),FragmentOrderSheetUsed())

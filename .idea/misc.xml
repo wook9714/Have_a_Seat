@@ -5,9 +5,13 @@
       <map>
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/drawable/mainbtn_background.xml" value="0.3697916666666667" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/drawable/maintoolbar.xml" value="0.3697916666666667" />
+        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout-v28/activity_main.xml" value="0.3536458333333333" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/activity_order_sheet.xml" value="0.25" />
-        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/menu/mainmenu.xml" value="0.3578125" />
+        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/fragment_order_sheet_paid.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/fragment_order_sheet_used.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/order_sheet_item_recycler.xml" value="0.3536458333333333" />
+        <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/menu/mainmenu.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/activity_kakao_map.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout/activity_order_sheet.xml" value="0.5" />

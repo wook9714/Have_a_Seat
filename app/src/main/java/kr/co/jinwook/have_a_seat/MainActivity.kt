@@ -13,8 +13,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.marginTop
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kr.co.jinwook.have_a_seat.UIFunction.setMarginTop
 import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
 import net.daum.mf.map.api.MapReverseGeoCoder
 import android.content.pm.PackageManager
@@ -35,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        getAppKeyHash()
+
         setSupportActionBar(toolbarMain)
         binding.toolbarMain.setNavigationOnClickListener {
             Toast.makeText(this, "Navigation Menu Clicked", Toast.LENGTH_SHORT).show()
@@ -94,21 +96,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun getAppKeyHash() {
-        try {
-            val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
-            for (signature in info.signatures) {
-                var md: MessageDigest
-                md = MessageDigest.getInstance("SHA")
-                md.update(signature.toByteArray())
-                val something: String = String(Base64.encode(md.digest(), 0))
-                Log.e("Hash key", something)
-            }
-        } catch (e: Exception) {
-            // TODO Auto-generated catch block
-            Log.e("name not found", e.toString())
-        }
-    }
+
+
 
 
 
