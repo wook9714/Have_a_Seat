@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".OrderSheet"
     android:background="@color/smokyGray"
+    android:fitsSystemWindows="true"
     >
 
     <com.google.android.material.tabs.TabLayout

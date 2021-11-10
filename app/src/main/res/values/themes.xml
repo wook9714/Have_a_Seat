@@ -22,7 +22,7 @@
     </style>
 
     <style name="CustomTheme.Have_a_Seat" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
 
     </style>
 

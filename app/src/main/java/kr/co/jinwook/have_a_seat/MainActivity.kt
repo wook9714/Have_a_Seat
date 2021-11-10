@@ -1,31 +1,17 @@
 package kr.co.jinwook.have_a_seat
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_main.*
-import android.view.View
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
-import androidx.core.view.marginTop
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
-import kr.co.jinwook.have_a_seat.UIFunction.setMarginTop
-import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
-import net.daum.mf.map.api.MapReverseGeoCoder
-import android.content.pm.PackageManager
-
-import android.content.pm.PackageInfo
-import android.util.Base64
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.ktx.auth
-import java.lang.Exception
-import java.security.MessageDigest
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_main.*
+import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -95,6 +81,26 @@ class MainActivity : AppCompatActivity() {
         Log.d("tag",UIFunction.getStatusBarHeight(resources).toString())
 */
     }
+
+    private var backBtnTime : Long = 0
+
+    override fun onBackPressed() {
+
+        var currentTime : Long = System.currentTimeMillis()
+        var gapTime : Long = currentTime - backBtnTime
+
+        if (gapTime in 0..2000) {
+            super.onBackPressed()
+        }else{
+            backBtnTime = currentTime
+            Toast.makeText(this, "한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show()
+        }
+
+
+
+
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.mainmenu,menu)
         return true

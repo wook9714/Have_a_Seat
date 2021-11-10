@@ -34,7 +34,9 @@
         </activity>
         <activity
             android:name=".RestaurantInfo"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/CustomTheme.Have_a_Seat"
+            />
         <activity
             android:name=".SearchByLocation"
             android:exported="true" />
