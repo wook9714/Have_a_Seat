@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_restaurant_info.*
 import kr.co.jinwook.have_a_seat.databinding.ActivityRestaurantInfoBinding
 import android.R
 import android.view.View
-
 import com.google.android.material.appbar.CollapsingToolbarLayout
 
 
@@ -34,9 +33,6 @@ class RestaurantInfo : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-
-
 
 
         val fragmentAdapter = RestaurantInfoFrgmentAdapter(supportFragmentManager)
