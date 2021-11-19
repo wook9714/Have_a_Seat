@@ -13,7 +13,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
 
-//주석
+
 class MainActivity : AppCompatActivity() {
     val binding by lazy {ActivityMainBinding.inflate(layoutInflater)}
 
