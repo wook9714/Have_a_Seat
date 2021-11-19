@@ -16,8 +16,10 @@ class SearchByLocation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         mapView = MapView(this)
-        mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(37.49471488207207, 127.06363198238245), true)
+        mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(36.49471488207207, 126.06363198238245), true)
         binding.mapView.addView(mapView)
+
+
 
     
        
@@ -36,4 +38,7 @@ class SearchByLocation : AppCompatActivity() {
 
         mapView.addPOIItem(marker)
     }
+
+
+
 }

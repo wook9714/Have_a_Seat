@@ -12,16 +12,16 @@ import net.daum.mf.map.api.MapReverseGeoCoder
 
 
 
-object LocationFuncion {
+class LocationFuncion {
 
-    fun getLocationNamebyGps(activity:Activity,latitude:Double,longitude:Double):String{
+    var resultListner:MapReverseGeoCoder.ReverseGeoCodingResultListener? = null
+
+    fun addResultListner(resultListner:MapReverseGeoCoder.ReverseGeoCodingResultListener){
+        this.resultListner = resultListner
+    }
+
+    fun getLocationNamebyGps(activity:Activity,latitude:Double,longitude:Double){
         val mapPoint = MapPoint.mapPointWithGeoCoord(latitude, longitude)
-
-
-
-
-
-        val resultListner = ResultListner()
 
         val reverseGeoCoder = MapReverseGeoCoder(
             activity.getString(R.string.kakao_app_key),
@@ -30,18 +30,6 @@ object LocationFuncion {
             activity
         )
         reverseGeoCoder.startFindingAddress()
-        return ""
     }
 
-}
-class ResultListner:MapReverseGeoCoder.ReverseGeoCodingResultListener{
-
-    override fun onReverseGeoCoderFoundAddress(p0: MapReverseGeoCoder?, p1: String?) {
-
-        Log.d("myTag",p1!!)
-    }
-
-    override fun onReverseGeoCoderFailedToFindAddress(p0: MapReverseGeoCoder?) {
-        Log.d("myTag","오류")
-    }
 }

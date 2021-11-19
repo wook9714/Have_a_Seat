@@ -10,6 +10,9 @@ import com.google.firebase.ktx.Firebase
 import kr.co.jinwook.have_a_seat.databinding.ActivityTestBinding
 
 object FirebaseFunction {
+
+    var firebaseIDToken:String? = "ynoAKRBjZvat9nXmFa6aUba2kPU2";
+
     //카카오,네이버,페이스북,구글,전화번호인증
     lateinit var auth:FirebaseAuth
     val db = Firebase.firestore

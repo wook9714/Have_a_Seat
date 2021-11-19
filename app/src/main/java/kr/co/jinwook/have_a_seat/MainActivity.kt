@@ -1,5 +1,6 @@
 package kr.co.jinwook.have_a_seat
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -12,19 +13,29 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 import kr.co.jinwook.have_a_seat.databinding.ActivityMainBinding
+import android.content.pm.PackageManager
+
+import android.content.pm.PackageInfo
+import android.util.Base64
+import androidx.core.content.ContextCompat
+import java.lang.Exception
+import java.security.MessageDigest
 
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : BaseActivity() {
+
+    val PERM_FIND_NOW_LOCATION = 101
+
     val binding by lazy {ActivityMainBinding.inflate(layoutInflater)}
-
-
-
+ 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         FirebaseFunction.auth = Firebase.auth //파이어베이스 auth 초기화
 
+        getAppKeyHash()
         //임시로 익명로그인
         if(FirebaseFunction.auth.currentUser ==null){
             Log.d("myTag","로그인 안됨")
@@ -68,6 +79,16 @@ class MainActivity : AppCompatActivity() {
         binding.btnRestaurantInfo.setOnClickListener {
             val intentGoRestaurantInfo = Intent(this,RestaurantInfo::class.java)
             startActivity(intentGoRestaurantInfo)
+        }
+
+        binding.myLocationBtn.setOnClickListener{
+
+            //현재 위치를 찾기위해 권한 요청
+            requirePermissions(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.INTERNET
+                ),PERM_FIND_NOW_LOCATION)
+
         }
 
 
@@ -128,8 +149,42 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    private fun getAppKeyHash() {
+        try {
+            val info = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
+            for (signature in info.signatures) {
+                var md: MessageDigest
+                md = MessageDigest.getInstance("SHA")
+                md.update(signature.toByteArray())
+                val something: String = String(Base64.encode(md.digest(), 0))
+                Log.e("Hash key", something)
+            }
+        } catch (e: Exception) {
+            // TODO Auto-generated catch block
+            Log.e("name not found", e.toString())
+        }
+    }
 
 
+    //permission 관련
+    override fun permissionGranted(requestCode: Int) {
+        when(requestCode){
+            PERM_FIND_NOW_LOCATION->{
+                //현재위치를 찾는 액티비티로 이동
+                val intentGoFindNowLocation = Intent(this,FindNowLocation::class.java)
+                startActivity(intentGoFindNowLocation)
+            }
+        }
+    }
+
+    override fun permissionDenied(requestCode: Int) {
+        when(requestCode){
+            PERM_FIND_NOW_LOCATION->{
+                Toast.makeText(this,"권한을 허용해주세요",Toast.LENGTH_LONG).show()
+
+            }
+        }
+    }
 
 
 
