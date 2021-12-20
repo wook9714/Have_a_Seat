@@ -2,17 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.co.jinwook.have_a_seat">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-
 
     <meta-data
         android:name="com.kakao.sdk.AppKey"
         android:value="@string/kakao_app_key" />
 
     <application
-
         android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,9 +24,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Have_a_Seat"
         android:usesCleartextTraffic="true">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
         <activity
-            android:name=".FindNowLocation"
-            android:exported="true" />
+            android:name=".FindMyLocation"
+            android:exported="false"
+            android:label="@string/title_activity_find_my_location" />
+        <activity
+            android:name=".googlemapTest"
+            android:exported="false"
+            android:label="@string/title_activity_googlemap_test" />
         <activity
             android:name=".Test"
             android:exported="false" />
@@ -42,16 +63,9 @@
             android:exported="true"
             android:theme="@style/CustomTheme.Have_a_Seat" />
         <activity
-            android:name=".SearchByLocation"
-            android:exported="true" />
-        <activity
             android:name=".OrderSheet"
             android:exported="true"
             android:theme="@style/CustomTheme.Have_a_Seat" />
-
-        <meta-data
-            android:name="com.kakao.sdk.AppKey"
-            android:value="@string/kakao_app_key" />
     </application>
 
 </manifest>

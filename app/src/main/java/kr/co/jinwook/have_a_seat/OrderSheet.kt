@@ -10,7 +10,7 @@ import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_order_sheet.*
 import kr.co.jinwook.have_a_seat.databinding.ActivityOrderSheetBinding
-import net.daum.mf.map.api.MapReverseGeoCoder
+
 
 
 

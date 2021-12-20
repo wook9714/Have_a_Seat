@@ -63,8 +63,8 @@ class MainActivity : BaseActivity() {
 
         }
         binding.btnGpsMapping.setOnClickListener {
-            val intentGoGpsMapping = Intent(this,SearchByLocation::class.java)
-            startActivity(intentGoGpsMapping)
+            //val intentGoGpsMapping = Intent(this,SearchByLocation::class.java)
+            //startActivity(intentGoGpsMapping)
 
         }
 
@@ -173,7 +173,7 @@ class MainActivity : BaseActivity() {
         when(requestCode){
             PERM_FIND_NOW_LOCATION->{
                 //현재위치를 찾는 액티비티로 이동
-                val intentGoFindNowLocation = Intent(this,FindNowLocation::class.java)
+                val intentGoFindNowLocation = Intent(this,FindMyLocation::class.java)
                 startActivity(intentGoFindNowLocation)
             }
         }
