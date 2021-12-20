@@ -1,5 +1,6 @@
 package kr.co.jinwook.have_a_seat
 
+
 import android.Manifest
 import android.content.Context
 import android.content.Intent
@@ -84,9 +85,10 @@ class MainActivity : BaseActivity() {
         binding.myLocationBtn.setOnClickListener{
 
             //현재 위치를 찾기위해 권한 요청
-            requirePermissions(arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION,
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.INTERNET
+            requirePermissions(arrayOf(Manifest.permission.INTERNET,
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION
+
                 ),PERM_FIND_NOW_LOCATION)
 
         }

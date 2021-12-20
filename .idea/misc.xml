@@ -41,6 +41,9 @@
         <entry key="..\:/Users/lvhds/StudioProjects/Have_a_Seat/app/src/main/res/layout/fragment_order_sheet_all.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/lvhds/StudioProjects/Have_a_Seat/app/src/main/res/layout/fragment_order_sheet_need_pay.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/lvhds/StudioProjects/Have_a_Seat/app/src/main/res/layout/order_sheet_item_recycler.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/activity_find_now_location.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2866847826086957" />
+        <entry key="app/src/main/res/layout/activity_restaurant_info.xml" value="0.2866847826086957" />
       </map>
     </option>
   </component>
