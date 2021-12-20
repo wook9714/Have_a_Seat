@@ -93,6 +93,11 @@ class MainActivity : BaseActivity() {
 
         }
 
+        binding.btnImageUpload.setOnClickListener {
+            val intentGoUploadRestaurantActivity = Intent(this,UploadRestaurantActivity::class.java)
+            startActivity(intentGoUploadRestaurantActivity)
+        }
+
 
 
 

@@ -14,10 +14,10 @@ import kotlinx.android.synthetic.main.activity_restaurant_info.*
 import kr.co.jinwook.have_a_seat.databinding.ActivityRestaurantInfoBinding
 import android.R
 import android.view.View
+import android.widget.Toast
 import com.google.android.material.appbar.CollapsingToolbarLayout
-
-
-
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 class RestaurantInfo : AppCompatActivity() {
@@ -33,6 +33,8 @@ class RestaurantInfo : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        getRepresentImageNumber()
 
 
         val fragmentAdapter = RestaurantInfoFrgmentAdapter(supportFragmentManager)
@@ -85,6 +87,55 @@ class RestaurantInfo : AppCompatActivity() {
 
 
 
+    }
+
+    lateinit var restaurantName : String
+    var representImageNumber : String =""
+
+    fun getRepresentImageNumber(){
+        Log.d(TAG, "RestaurantInfo - getRepresentImageNumber() called")
+        val db2 = Firebase.firestore
+        val restaurant = db2.collection("restaurant")
+        restaurant.whereEqualTo("restaurantName", "부산아지매국밥").get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    Log.d(TAG, "representImage 의 개수는 ${document.getString("representImageNumber")}")
+                    representImageNumber = document.getString("representImageNumber").toString()
+
+
+                }
+                makeImageNumberList(representImageNumber)
+
+                restaurantName = "부산아지매국밥"
+                var representImagePagerAdapter = RepresentImagePagerAdapter()
+                representImagePagerAdapter.activity = this@RestaurantInfo
+                representImagePagerAdapter.restaurantName = restaurantName
+                representImagePagerAdapter.imageNumberList = makeImageNumberList(representImageNumber)
+
+                binding.viewPagerRepresentImage.adapter = representImagePagerAdapter
+
+            }.addOnFailureListener {
+
+                Toast.makeText(this@RestaurantInfo, "Failed", Toast.LENGTH_LONG).show()
+            }
+
+    }
+
+
+
+    private fun makeImageNumberList(representImageNumber : String): MutableList<String> {
+        Log.d(TAG, "RestaurantInfo - makeImageNumberList() called")
+        var imageNumberList = mutableListOf<String>()
+        var representImageNumberToInt  = representImageNumber.toInt()
+        Log.d(TAG, "makeImageNumberList: $representImageNumberToInt")
+
+        for (i in 1..representImageNumberToInt){
+            var listMember = i.toString()
+            imageNumberList.add(listMember)
+
+        }
+        Log.d(TAG, "makeImageNumberList: $imageNumberList")
+        return imageNumberList
     }
 
 
