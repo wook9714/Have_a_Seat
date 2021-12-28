@@ -53,8 +53,9 @@
         <entry key="app/src/main/res/layout/activity_restaurant_info.xml" value="0.2866847826086957" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/layout/activity_upload_restaurant.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/container_in_foodorderprocess.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/foodorderprocess_friendbtn.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_order_sheet_all.xml" value="0.23072916666666668" />
-        <entry key="app/src/main/res/layout/order_sheet_item_recycler.xml" value="0.26403985507246375" />
         <entry key="app/src/main/res/layout/fragment_order_sheet_need_pay.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/menu_detail_select.xml" value="0.25833333333333336" />
       </map>

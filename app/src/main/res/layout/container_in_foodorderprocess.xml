@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:id="@+id/testID"
+    >
+
+
+    <ImageView
+        android:id="@+id/image_foodImage"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img"
+        tools:image="@drawable/common_google_signin_btn_icon_disabled" />
+
+    <TextView
+        android:id="@+id/text_foodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintLeft_toRightOf="@id/image_foodImage"
+        app:layout_constraintTop_toTopOf="@id/image_foodImage"
+        android:layout_marginLeft="10dp"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/text_foodInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@id/text_foodName"
+        app:layout_constraintLeft_toRightOf="@id/image_foodImage"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="14dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/image_foodImage"
+        app:layout_constraintLeft_toRightOf="@id/image_foodImage"
+        android:layout_marginLeft="10dp"
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>
