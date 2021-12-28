@@ -69,7 +69,7 @@ class MainActivity : BaseActivity() {
         }
 
         binding.testButton.setOnClickListener{
-            val intentGoTestScene = Intent(this,Test::class.java)
+            val intentGoTestScene = Intent(this,FoodOrderProcess::class.java)
             startActivity(intentGoTestScene)
         }
 

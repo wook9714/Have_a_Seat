@@ -94,6 +94,7 @@ class FindMyLocation : AppCompatActivity(), OnMapReadyCallback {
                 if(list.size!=0) {
                     binding.locationText.text = list.get(0).getAddressLine(0).toString()
                 }
+
             }
         })
 
@@ -120,13 +121,6 @@ class FindMyLocation : AppCompatActivity(), OnMapReadyCallback {
 
                         //mMap.clear()
                         //markerOptions.visible(false)
-
-
-
-
-
-
-
                         setLastLocation(location)
                     }
 

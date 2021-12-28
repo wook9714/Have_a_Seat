@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.31636784268363216" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/drawable/mainbtn_background.xml" value="0.3697916666666667" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/drawable/maintoolbar.xml" value="0.3697916666666667" />
         <entry key="..\:/Users/John Kim/AndroidStudioProjects/Have_a_Seat/app/src/main/res/layout-v28/activity_main.xml" value="0.3536458333333333" />
@@ -45,14 +46,17 @@
         <entry key="app/src/main/res/drawable/ic_baseline_notifications_none_24.xml" value="0.27447916666666666" />
         <entry key="app/src/main/res/layout/activity_find_my_location.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_find_now_location.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/activity_food_order_process.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/activity_googlemap_test.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2866847826086957" />
+        <entry key="app/src/main/res/layout/activity_order_sheet.xml" value="0.2388888888888889" />
         <entry key="app/src/main/res/layout/activity_restaurant_info.xml" value="0.2866847826086957" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.23072916666666668" />
-        <entry key="app/src/main/res/layout/activity_upload_restaurant.xml" value="0.1894630192502533" />
+        <entry key="app/src/main/res/layout/activity_upload_restaurant.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/fragment_order_sheet_all.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/layout/order_sheet_item_recycler.xml" value="0.26403985507246375" />
-        <entry key="app/src/main/res/layout/represent_image_item_viewpager.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_order_sheet_need_pay.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/menu_detail_select.xml" value="0.25833333333333336" />
       </map>
     </option>
   </component>
