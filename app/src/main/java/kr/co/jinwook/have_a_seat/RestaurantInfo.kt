@@ -15,12 +15,15 @@ import kr.co.jinwook.have_a_seat.databinding.ActivityRestaurantInfoBinding
 import android.R
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 
 class RestaurantInfo : AppCompatActivity() {
+    val TAG : String = "로그"
 
 
 
@@ -52,11 +55,15 @@ class RestaurantInfo : AppCompatActivity() {
 
             stickListener = { _ ->
                 Log.d(TAG, "Stick Listener")
+
             }
             freeListener = { _ ->
                 Log.d(TAG, "Free Listener")
+
             }
         }
+
+
 
 
 

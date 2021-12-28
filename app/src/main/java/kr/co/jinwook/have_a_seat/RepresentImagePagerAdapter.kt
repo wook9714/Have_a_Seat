@@ -2,10 +2,12 @@ package kr.co.jinwook.have_a_seat
 
 import android.app.Activity
 import android.app.ProgressDialog
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.storage.FirebaseStorage
@@ -47,6 +49,20 @@ class Holder(val binding:RepresentImageItemViewpagerBinding) : RecyclerView.View
         progressDialog.setMessage("Fetching Image...")
         progressDialog.setCancelable(false)
         progressDialog.show()
+        UIFunction.storageRef.child("restaurant/$restaurantName/$imageNumber").getBytes(UIFunction.ONE_MEGABYTE)
+
+            .addOnSuccessListener {
+                if (progressDialog.isShowing) progressDialog.dismiss()
+                var image: Bitmap? = null
+                image = BitmapFactory.decodeByteArray(it,0,it.size)
+                binding.imageViewRepresentImage.setImageBitmap(image)
+                Log.d("myTag","이미지 다운 성공")
+                Log.d("myTag",it.size.toString()) }
+            .addOnFailureListener {
+                if (progressDialog.isShowing) progressDialog.dismiss()
+                Log.d("myTag",it.toString())
+            }
+        /*
         val storageRef = FirebaseStorage.getInstance().reference.child("restaurant/$restaurantName/$imageNumber/")
 
         val localFile = File.createTempFile("tempImage", "jpg")
@@ -62,7 +78,7 @@ class Holder(val binding:RepresentImageItemViewpagerBinding) : RecyclerView.View
             if (progressDialog.isShowing) progressDialog.dismiss()
             Toast.makeText(activity, "Failed to download image", Toast.LENGTH_LONG).show()
         }
-
+*/
     }
 
 }
