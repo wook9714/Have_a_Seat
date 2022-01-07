@@ -106,6 +106,7 @@ class RestaurantInfo : AppCompatActivity() {
                 }
 
             }
+    }
 
         fun getRepresentImageNumber() {
             Log.d(TAG, "RestaurantInfo - getRepresentImageNumber() called")
@@ -128,8 +129,7 @@ class RestaurantInfo : AppCompatActivity() {
                     var representImagePagerAdapter = RepresentImagePagerAdapter()
                     representImagePagerAdapter.activity = this@RestaurantInfo
                     representImagePagerAdapter.restaurantName = restaurantName
-                    representImagePagerAdapter.imageNumberList =
-                        makeImageNumberList(representImageNumber)
+                    representImagePagerAdapter.imageNumberList = makeImageNumberList(representImageNumber)
                     binding.viewPagerRepresentImage.adapter = representImagePagerAdapter
 
                     binding.toolbar.title = restaurantName
@@ -142,7 +142,7 @@ class RestaurantInfo : AppCompatActivity() {
         }
 
 
-        private fun makeImageNumberList(representImageNumber: String): MutableList<String> {
+        fun makeImageNumberList(representImageNumber: String): MutableList<String> {
             Log.d(TAG, "RestaurantInfo - makeImageNumberList() called")
             var imageNumberList = mutableListOf<String>()
             var representImageNumberToInt = representImageNumber.toInt()
@@ -169,6 +169,5 @@ class RestaurantInfo : AppCompatActivity() {
         }
 
 
-    }
 }
 
