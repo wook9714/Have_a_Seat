@@ -22,6 +22,8 @@ import androidx.core.view.isVisible
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kr.co.jinwook.have_a_seat.restaurantInfo.InfoFragment
+import kr.co.jinwook.have_a_seat.restaurantInfo.ReviewFragment
 
 
 class RestaurantInfo : AppCompatActivity() {
@@ -42,8 +44,8 @@ class RestaurantInfo : AppCompatActivity() {
         //프레그먼트 연결
         val fragmentAdapter = RestaurantInfoFrgmentAdapter(supportFragmentManager)
         fragmentAdapter.addFragment(FragmentOrderSheetAll(), "메뉴")
-        fragmentAdapter.addFragment(FragmentOrderSheetNeedPay(), "정보")
-        fragmentAdapter.addFragment(FragmentOrderSheetPaid(), "리뷰")
+        fragmentAdapter.addFragment(InfoFragment(), "정보")
+        fragmentAdapter.addFragment(ReviewFragment(), "리뷰")
 
         //뷰페이저에 연결 후 탭과 연결
         binding.viewPager00.adapter = fragmentAdapter
@@ -101,10 +103,7 @@ class RestaurantInfo : AppCompatActivity() {
                 for (document in documents) {
                     Log.d(TAG, "representName은 ${document.getString("representName")}")
                     restaurantName = document.getString("restaurantName").toString()
-
-
                 }
-
             }
     }
 

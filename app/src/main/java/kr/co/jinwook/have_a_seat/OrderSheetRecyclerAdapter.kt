@@ -35,7 +35,7 @@ class OrderSheetHolder(val binding:OrderSheetItemRecyclerBinding):RecyclerView.V
         binding.orderDescription.text = data.orderDescription
         binding.orderPrice.text = "${data.price}원"
 
-        UIFunction.downloadAndSetImageViewFromFB(binding.shopImage,"images/test.jpg")
+        //UIFunction.downloadAndSetImageViewFromFB(binding.shopImage,"images/test.jpg")
 
 
 
