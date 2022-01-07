@@ -24,6 +24,9 @@
         android:theme="@style/Theme.Have_a_Seat"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".RestaurantListActivity"
+            android:exported="false" />
+        <activity
             android:name=".FoodOrderProcess"
             android:exported="false" />
         <activity

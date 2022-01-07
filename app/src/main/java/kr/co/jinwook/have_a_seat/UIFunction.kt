@@ -27,7 +27,7 @@ object UIFunction {
 
     val storage = Firebase.storage
     val storageRef = storage.reference
-    val ONE_MEGABYTE: Long = 1024 * 1024
+    val ONE_MEGABYTE: Long = 1024 * 2048
     var a:Bitmap? = null
 
 
